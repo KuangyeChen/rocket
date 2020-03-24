@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="rocket">
+  <link concave="yes" name="base_link0">
+    <contact>
+      <rolling_friction value="2"/>
+      <spinning_friction value="2"/>
+      <lateral_friction value="2"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+      <restitution value = "0.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="250"/>
+      <inertia ixx="0.000055524" ixy="0" ixz="0" iyy="0.000055524" iyz="0" izz="0.000055524"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="rocket.obj"/>
+      </geometry>
+      <material name="basemat">
+        <color rgba="0.8 0.8 0.8 1"/>
+      </material>
+    </visual>
+
+    <collision concave="yes">
+      <geometry>
+        <mesh filename="rocket.obj"/>
+      </geometry>
+    </collision>
+  </link>
+
+</robot>
